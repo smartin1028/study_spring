@@ -2,12 +2,37 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Bat File Executor</title>
+    <style>
+        .result-area {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <title>Bat File Executor</title>
 </head>
 <body>
 <h1>Bat File Executor</h1>
-<form th:action="@{/execute-bat}" method="post">
-    <button type="submit">Execute Bat File</button>
-</form>
+<div>
+    <h2>Bat File 1</h2>
+    <form th:action="@{/execute-bat-1}" method="post">
+        <button type="submit">Execute Bat File 1</button>
+    </form>
+    <div class="result-area">
+        <h3>Result for Bat File 1:</h3>
+        <div th:if="${message1}" th:text="${message1}"></div>
+    </div>
+</div>
+<div>
+    <h2>Bat File 2</h2>
+    <form th:action="@{/execute-bat-2}" method="post">
+        <button type="submit">Execute Bat File 2</button>
+    </form>
+    <div class="result-area">
+        <h3>Result for Bat File 2:</h3>
+        <div th:if="${message2}" th:text="${message2}"></div>
+    </div>
+</div>
 <form th:action="@{/}">
     <button type="submit">move to home</button>
 </form>
