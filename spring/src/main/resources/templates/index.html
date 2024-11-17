@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bat File Executor</title>
+</head>
+<body>
+<h1>Bat File Executor</h1>
+<form th:action="@{/execute-bat}" method="post">
+    <button type="submit">Execute Bat File</button>
+</form>
+<form th:action="@{/}">
+    <button type="submit">move to home</button>
+</form>
+
+<p th:if="${message}" th:text="${message}"></p>
+</body>
+</html>
